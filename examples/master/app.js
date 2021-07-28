@@ -1,4 +1,4 @@
-import request from './services/request';
+import request from './common/utils/request';
 import fetch from 'dva/fetch';
 
 export const qiankun = request('/apps').then(apps => ({

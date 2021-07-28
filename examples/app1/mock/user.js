@@ -6,7 +6,7 @@ export default {
       {
         'id|+1': 1,
         name: '@cname',
-        email: '@email',
+        email: '@email'
       },
     ],
   }),

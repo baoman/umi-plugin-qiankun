@@ -1,4 +1,4 @@
-import { query } from '@/services/user';
+import { query } from '@/services/user/api';
 
 export default {
   namespace: 'user',

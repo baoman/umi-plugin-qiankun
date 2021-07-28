@@ -1,25 +1,19 @@
 {
-  "name": "@umijs/plugin-qiankun",
-  "version": "1.7.0",
-  "description": "umi plugin for qiankun",
-  "repository": "umijs/umi-plugin-qiankun",
+  "name": "umi-qiankun",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "keywords": [
-    "umi-plugin",
-    "micro frontend",
-    "qiankun"
-  ],
   "authors": [
     {
-      "name": "chencheng",
-      "email": "sorrycc@gmail.com"
+      "name": "sunjuan",
+      "email": "sunjuan@focusmedia.cn"
     }
   ],
   "engines": {
     "node": ">=8.0.0"
   },
   "scripts": {
-    "start": "npm-run-all --parallel start:*",
+    "start": "npm run build && npm-run-all --parallel start:*",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lint": "npm run lint:js && npm run lint:prettier && npm test",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
@@ -90,8 +84,5 @@
     "slave.js",
     "index.js"
   ],
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  }
+  "license": "MIT"
 }

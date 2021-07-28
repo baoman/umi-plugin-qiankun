@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Table } from 'antd';
+import { Table } from 'antd';
 import { connect } from 'dva';
 
 @connect(({ user }) => ({ user }))
@@ -27,7 +27,7 @@ export default class extends React.PureComponent {
       {
         dataIndex: 'email',
         title: 'Email',
-      },
+      }
     ];
 
     return (

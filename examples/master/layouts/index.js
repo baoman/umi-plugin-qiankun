@@ -2,6 +2,8 @@ import { Breadcrumb, Layout, Menu } from 'antd';
 import { connect } from 'dva';
 import React from 'react';
 import { Link } from 'umi';
+import UserService from '../domains/user/service';
+import User from '../domains/user/entities/index';
 import style from './style.less';
 
 const { Header, Content, Footer } = Layout;
@@ -25,12 +27,26 @@ export default class extends React.PureComponent {
   constructor(props) {
     super(props);
     const { dispatch } = props;
+    this.state = {
+      user: new User()
+    }
     dispatch({
       type: 'base/getApps',
     });
   }
-
+  componentDidMount() {
+    this.getUserInfo();
+  }
+  // 获取用户信息
+  getUserInfo = () => {
+    UserService.getUserInfo().then(user => {
+      this.setState({
+        user
+      })
+    });
+  }
   render() {
+    const { user } = this.state;
     const { location, children, base } = this.props;
     const { name, apps } = base;
     const selectKey = '/' + location.pathname.split('/')[1];
@@ -63,12 +79,13 @@ export default class extends React.PureComponent {
               );
             })}
           </Menu>
+          <div className={style.username}>{user.name} {user.getUserType(user.type)}</div>
         </Header>
         <Content className={style.content}>
           {renderBreadCrumb(location.pathname)}
           {// 加载master pages，此处判断较为简单，实际需排除所有子应用base打头的路径
             selectKey === '/' ? children : null}
-          {apps.length ? <div id="root-subapp-container"/> : null}
+          {apps.length ? <div id="root-subapp-container" /> : null}
         </Content>
         <Footer className={style.footer}>Ant Design ©2019 Created by Ant UED</Footer>
       </Layout>

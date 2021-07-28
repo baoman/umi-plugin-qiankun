@@ -1,4 +1,4 @@
-import { query } from '@/services/app';
+import { query } from '@/services/app/api';
 import { qiankunStart } from 'umi';
 
 function sleep(ms) {

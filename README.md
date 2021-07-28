@@ -1,21 +1,3 @@
-# Umi@2 plugin for [qiankun@v1](https://github.com/umijs/qiankun/tree/1.x).
-
-# Umi@3 相应的 qiankun 插件请移步[这里](https://github.com/umijs/plugins/tree/master/packages/plugin-qiankun)
-
-[![NPM version](https://img.shields.io/npm/v/@umijs/plugin-qiankun/umi2.svg?style=flat)](https://npmjs.org/package/@umijs/plugin-qiankun) [![Build Status](https://img.shields.io/travis/umijs/umi-plugin-qiankun.svg?style=flat)](https://travis-ci.org/umijs/umi-plugin-qiankun) [![NPM downloads](http://img.shields.io/npm/dm/@umijs/plugin-qiankun.svg?style=flat)](https://npmjs.org/package/@umijs/plugin-qiankun)
-
-## Installation
-
-```shell
-$ npm i @umijs/plugin-qiankun@umi2 -S
-```
-
-or
-
-```shell
-$ yarn add @umijs/plugin-qiankun@umi2
-```
-
 ## Examples
 
 导航是主应用，App1 和 App2 是子应用，
@@ -278,21 +260,3 @@ PORT=8081
 - [ ] 公共依赖加载策略
 - [x] 子应用单独调试
 - [x] 基于 Hooks 的父子应用通讯（需强制 external React 保证一个 React 实例）
-
-## Questions & Suggestions
-
-Please open an issue [here](https://github.com/umijs/umi/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
-
-## Community
-
-https://github.com/umijs/umi#community
-
-## 相关
-
-- [RFC: 微前端（@umijs/plugin-qiankun） by sorrycc · Pull Request #3 · umijs/rfcs · GitHub](https://github.com/umijs/rfcs/pull/3)
-
-- [umi-example-monorepo](https://github.com/umijs/umi-example-monorepo) 之前尝试的另一种简单粗糙的微前端试验
-
-## LICENSE
-
-MIT
